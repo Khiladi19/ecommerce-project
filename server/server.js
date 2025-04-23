@@ -9,7 +9,8 @@ const PORT = process.env.PORT || 3000
 
 
 const allowedOrigins = [
-  "http://localhost:5173",  
+  // "http://localhost:5173",
+  "https://ecommerce-frontend-wh22.onrender.com",  
 ];
 
 app.use(cors({

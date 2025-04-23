@@ -3,7 +3,8 @@ import axios from "axios";
 
 // Create axios instance
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:2000/api", // Set your base API URL
+  // baseURL: "http://localhost:2000/api", 
+  baseURL: "https://ecommerce-backend-mvrj.onrender.com/api", // Set your base API URL
   headers: {
     "Content-Type": "application/json",
   },
