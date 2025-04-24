@@ -21,13 +21,12 @@ import Checkout from "./pages/Checkout";
 import Payment from "./pages/Payment";
 import Success from "./pages/Success";
 import OrderHistory from "./pages/OrderHistory";
-import axios from "../src/api/axios"; 
-const BASE_URL = "/user"; 
+import axios from "../src/api/axios";
+const BASE_URL = "/user";
 
 function App() {
   const dispatch = useDispatch();
   const { token } = useSelector((state) => state.auth);
-
 
   useEffect(() => {
     const savedToken = localStorage.getItem("token");
@@ -63,8 +62,22 @@ function App() {
         <Route path="/" element={<Products />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/product/:id" element={<ProductDetails />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route
+          path="/product/:id"
+          element={
+            <PrivateRoute>
+              <ProductDetails />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <PrivateRoute>
+              <Cart />
+            </PrivateRoute>
+          }
+        />
         <Route
           path="/profile"
           element={
@@ -85,15 +98,15 @@ function App() {
           path="/shipping/list"
           element={
             <PrivateRoute>
-              <AllAddresses/>
+              <AllAddresses />
             </PrivateRoute>
           }
         />
 
-        <Route path="/checkout" element={<Checkout/>} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/success" element={<Success />} />
         <Route path="/payment" element={<Payment />} />
-        <Route path="/orders" element={<OrderHistory/>} />
+        <Route path="/orders" element={<OrderHistory />} />
         <Route path="/admin/add" element={<AddProductForm />} />
         <Route path="/admin/list" element={<ProductList />} />
       </Routes>
