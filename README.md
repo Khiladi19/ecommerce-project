@@ -47,6 +47,12 @@ ecommerce-project/ ├── client/ # Frontend (React + Tailwind) ├── ser
 ### 🏠 Homepage
 ![Home](./images/Home.png)
 
+### 🔍 Searchpage
+![Search](./images/search.png)
+
+### ⚙️ Filterpage
+![Search](./images/filter.png)
+
 ### 🔐 Details Page
 ![Details](./images/Details.png)
 
