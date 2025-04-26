@@ -456,7 +456,10 @@ export default function Payment() {
               toast.success("Payment Successful & Order Placed!");
               dispatch(clearCart());
               localStorage.removeItem("shippingAddress");
-              navigate("/orders");
+              navigate("/success")
+              setTimeout(() => {
+                navigate("/orders");
+              }, 1500);
             } else {
               toast.error("Payment verification failed");
             }
