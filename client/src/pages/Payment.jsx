@@ -450,7 +450,7 @@ export default function Payment() {
             });
 
 
-            console.log("order frontend :- ",data)
+            // console.log("order frontend :- ",data)
 
             if (data.success) {
               toast.success("Payment Successful & Order Placed!");
