@@ -24,7 +24,6 @@ axiosInstance.interceptors.request.use(
   }
 );
 
-// Optional: Response Interceptor (handle errors globally)
 axiosInstance.interceptors.response.use(
   (response) => response,
   (error) => {
